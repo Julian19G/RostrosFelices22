@@ -1,0 +1,50 @@
+﻿@page
+@model RostrosFelices.Pages.Servicios.IndexModel
+@{
+    ViewData["Title"] = "Index Servicios";
+}
+<h1>Index Servicios</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+<table  class ="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicios[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicios[0].Empleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicios[0].ClienteId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Servicios[0].Fecha)
+            </th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Servicios)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modeItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modeItem => item.Empleado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modeItem => item.ClienteId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha.ToString("dd/MM/yyyy"))
+                </td>
+                <td> <span></span>  </td>
+            </tr>
+        }
+    </tbody>
+</table>
