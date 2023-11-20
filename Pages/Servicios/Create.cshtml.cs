@@ -25,7 +25,7 @@ namespace RostrosFelices.Pages.Servicios
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || _context.Servicios == null || Servicio == null)
+            if ( _context.Servicios == null || Servicio == null)
             {
                 return Page();
             }
