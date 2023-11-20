@@ -1,4 +1,6 @@
-﻿namespace RostrosFelices.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RostrosFelices.Models
 {
     public class Servicio
     {
@@ -9,6 +11,7 @@
 
 
         public DateTime Fecha { get; set; }
-        public Cliente Cliente { get; set; }
+        public int ClienteId { get; set; }
+        public Cliente? Cliente { get; set; }
     }
 }
