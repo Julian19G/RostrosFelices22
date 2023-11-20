@@ -11,7 +11,11 @@ namespace RostrosFelices
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-
+            builder.Services.AddAuthentication().AddCookie("MyCookieAuth", options =>
+            {
+                options.Cookie.Name = "MyCookiesAuth";
+                options.LoginPath = "/Account/Login";
+            });
             builder.Services.AddDbContext<RostrosContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("RostrosDB")));
 

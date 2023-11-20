@@ -1,0 +1,2 @@
+﻿ALTER TABLE Servicios
+ALTER COLUMN ClienteId INT NOT NULL;
