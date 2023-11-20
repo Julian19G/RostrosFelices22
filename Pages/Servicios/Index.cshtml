@@ -41,9 +41,12 @@
                     @Html.DisplayFor(modeItem => item.ClienteId)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Fecha.ToString("dd/MM/yyyy"))
+                    @Html.DisplayFor(modelItem => item.Fecha)
                 </td>
-                <td> <span></span>  </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="bnt btn-warning">Edit</a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="bnt btn-danger">Delete</a>
+                </td>
             </tr>
         }
     </tbody>
